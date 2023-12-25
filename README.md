@@ -113,7 +113,7 @@ LINE WORKSがCallbackをアプリケーションへ送信できるように、[D
 Callback URL入力欄には、次の値を入力してください。
 
 ```txt
-{Visual Studio Codeで発行したアドレス} + callback
+{Visual Studio Codeで発行したURL} + callback
 ```
 
 入力例は次のようになります。
