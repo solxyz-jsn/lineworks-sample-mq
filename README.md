@@ -134,7 +134,7 @@ Webコンソール画面のURLは、ブローカーの詳細画面から確認�
 
 <img alt="MQコンソール" src="image\sample_bot_setting06.png" width="60%">
 
-この状態で、Botとのトークルームからメッセージを送信してください。
+この状態で、Botとのトークルームからメッセージを送信してください。使用するLINE WORKSは、Webブラウザ、Webアプリ、モバイルアプリいずれでも問題ありません。
 
 <img alt="LW" src="image\sample_bot_setting07.png" width="60%">
 
