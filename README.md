@@ -21,12 +21,12 @@
 
 ## 概要
 
-コース「LINE WORKSのBotにMQを実装」のサンプルコードを、2つのサンプルプロジェクトに分割してメッセージキュー（MQ）を導入するようにしたサンプルコードです。
+コース「[LINE WORKS API応用](https://github.com/solxyz-jsn/lineworks-sample-advanced)」のサンプルコードに、メッセージキュー（MQ）を導入したサンプルコードです。LINE WORKSから受信してMQへ送信するプロジェクトと、MQから受信してLINE WORKSへ送信するプロジェクトの二つで構成しています。
 
 - LINE WORKSからのメッセージ受取部（パブリッシャー）：メッセージ送信先をLINE WORKSからAmazon MQに変更する
 - Amazon MQからのメッセージ受取部（コンシューマー）：Amazon MQからメッセージを受け取り、そのメッセージをLINE WORKS APIを用いてBotへ送信する
 
-LINE WORKS Botへ送信されるメッセージは「[LINE WORKS API応用](https://github.com/solxyz-jsn/lineworks-sample-advanced)」のサンプルコードと同一です。
+Botへ送信されるメッセージは「LINE WORKS API応用」のサンプルコードと同一です。
 
 ## 使用方法
 
