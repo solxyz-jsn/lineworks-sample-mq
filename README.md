@@ -9,14 +9,14 @@
   - [サンプルリポジトリのクローン](#サンプルリポジトリのクローン)
   - [アプリケーション起動](#アプリケーション起動)
     - [パブリッシャー](#パブリッシャー)
-      - [パブリッシャー起動](#パブリッシャー起動)
-      - [パブリッシャー起動後設定](#パブリッシャー起動後設定)
+      - [パブリッシャーの起動](#パブリッシャーの起動)
+      - [パブリッシャーの起動後設定](#パブリッシャーの起動後設定)
         - [ポート転送設定](#ポート転送設定)
         - [Callback URL設定](#callback-url設定)
-      - [パブリッシャー動作確認方法](#パブリッシャー動作確認方法)
+      - [パブリッシャーの動作確認方法](#パブリッシャーの動作確認方法)
     - [コンシューマー](#コンシューマー)
-      - [コンシューマー起動](#コンシューマー起動)
-      - [コンシューマー動作確認方法](#コンシューマー動作確認方法)
+      - [コンシューマーの起動](#コンシューマーの起動)
+      - [コンシューマーの動作確認方法](#コンシューマーの動作確認方法)
 - [問合せ先](#問合せ先)
 
 ## 概要
@@ -26,7 +26,7 @@
 - LINE WORKSからのメッセージ受取部（パブリッシャー）：メッセージ送信先をLINE WORKSからAmazon MQに変更する
 - Amazon MQからのメッセージ受取部（コンシューマー）：Amazon MQからメッセージを受け取り、そのメッセージをLINE WORKS APIを用いてBotへ送信する
 
-LINE WORKS Botへ送信されるメッセージは「LINE WORKSのBotにMQを実装」のサンプルコードと同一です。
+LINE WORKS Botへ送信されるメッセージは「LINE WORKS API応用」のサンプルコードと同一です。
 
 ## 使用方法
 
@@ -56,7 +56,7 @@ Developer Console：<https://dev.worksmobile.com/jp/console/openapi/v2/app/list/
 
 - 本プロジェクト内の`application.properties`で設定している環境変数の値を更新（値はすべてDeveloper Consoleから取得できます）
 
-  注意として、プロジェクト内の環境変数は、フォルダ`consumer`と`publisher`のそれぞれに存在する`src/main/resources/application.properties`で設定されています。**両方のパスにある`application.properties`の値を更新**してください。
+  ※プロジェクト内の環境変数は、フォルダ`consumer`と`publisher`のそれぞれに存在する`src/main/resources/application.properties`で設定されています。**両方のパスにある`application.properties`の値を更新**してください。
 
 ### サンプルリポジトリのクローン
 
@@ -74,19 +74,19 @@ git clone https://github.com/solxyz-jsn/lineworks-sample-mq
 
 #### パブリッシャー
 
-##### パブリッシャー起動
+##### パブリッシャーの起動
 
 Visual Studio Codeでフォルダ`publisher`を開いてください。
 
 左メニューの`JAVA PROJECT`から、プロジェクト`punlisher`を右クリックして`Run`を選択してください。
 
-<画像>
+<img alt="プロジェクト起動" src="image\sample_bot_setting01.png" width="60%">
 
 （画像のVisual Studio Codeはバージョン1.83です）
 
-##### パブリッシャー起動後設定
+##### パブリッシャーの起動後設定
 
-起動後に行う設定の詳細は、コース「LINE WORKSのBotにMQを実装」でも説明を記載しています。詳細はそちらを参照してください。
+起動後に行う設定の詳細は、コース「LINE WORKSのBotにMQを実装」でも説明を記載しています。併せて参考にしてください。
 
 ###### ポート転送設定
 
@@ -96,17 +96,17 @@ Visual Studio Code上でターミナルを開いてください。
 
 タブ`ポート`を押下して、`ポートの転送`を押下してください。ポート入力欄には、[application.properties](./src/main/resources/application.properties)の`server.port`で設定しているポート番号（デフォルトでは`8080`）を入力してください。
 
-<画像>
+<img alt="ポート番号" src="image\sample_bot_setting02.png" width="80%">
 
 初めてポート転送設定を行う場合は、GitHubアカウントによるサインインを確認するポップアップが表示されるので、`許可`を押下してGitHubアカウントのサインインを行ってください。
 
-<画像>
+<img alt="許可" src="image\sample_bot_setting03.png" width="60%">
 
 しばらく待機すると、URLが発行されます。
 
 次に、LINE WORKSからの通信を許可するために、表示範囲を変更します。右クリックから`ポートの表示範囲`を`公開`に設定してください。
 
-<画像>
+<img alt="公開" src="image\sample_bot_setting04.png" width="80%">
 
 ###### Callback URL設定
 
@@ -122,49 +122,53 @@ Callback URL入力欄には、次の値を入力してください。
 
 入力例は次のようになります。
 
-<画像>
+<img alt="Callback URL" src="image\sample_bot_setting05.png" width="60%">
 
-##### パブリッシャー動作確認方法
+##### パブリッシャーの動作確認方法
+
+パブリッシャーのメッセージがAmazon MQへ送信できているかを確認します。
 
 Amazon MQのWebコンソール画面を開きます。
 
-<画像>
+Webコンソール画面のURLは、ブローカーの詳細画面から確認できます。
 
-この状態で、LINE WORKSからメッセージを送信してください。
+<img alt="MQコンソール" src="image\sample_bot_setting06.png" width="60%">
 
-<画像>
+この状態で、Botとのトークルームからメッセージを送信してください。
 
-キューにメッセージが貯まっていきます。
+<img alt="LW" src="image\sample_bot_setting07.png" width="60%">
 
-<画像>
+Webコンソール画面を更新すると、グラフからキューにメッセージが貯まっている様子が確認できます。
+
+<img alt="MQコンソール" src="image\sample_bot_setting08.png" width="70%">
 
 #### コンシューマー
 
-##### コンシューマー起動
+##### コンシューマーの起動
 
 Visual Studio Codeでフォルダ`consumer`を開いてください。
 
 左メニューの`JAVA PROJECT`から、プロジェクト`consumer`を右クリックして`Run`を選択してください。
 
-<画像>
+<img alt="起動" src="image\sample_bot_setting09.png" width="70%">
 
-補足として、Visual Studio Code上でターミナルを開いていれば、ターミナルから次のコマンドを実行しても起動できます。
+補足として、Visual Studio Code上でターミナルを開いていれば、ターミナルから次のコマンドを実行しても起動できます（`build.gradle`と同一のディレクトリから実行すること）。
 
-パブリッシャーとコンシューマーのいずれも可能です。
+パブリッシャーとコンシューマーのいずれも実行可能です。
 
 ```shell
 ./gradlew bootRun
 ```
 
-##### コンシューマー動作確認方法
+##### コンシューマーの動作確認方法
 
-コンシューマーが起動すると、Amazon MQのメッセージ数が減ることが確認できます。
+コンシューマーが起動すると、Amazon MQにキューイングされていたメッセージはコンシューマーに渡され、Botとのトークルーム上にメッセージが表示されます。
 
-<画像>
+<img alt="LW" src="image\sample_bot_setting10.png" width="70%">
 
-Amazon MQにキューイングされていたメッセージはコンシューマーに渡され、LINE WORKS  APIによってBotとのトークルーム上にメッセージが表示されます。
+Amazon MQのWebコンソール画面を確認すると、キュー内のメッセージ数が減っていることが確認できます。
 
-<画像>
+<img alt="MQ" src="image\sample_bot_setting11.png" width="70%">
 
 ## 問合せ先
 
