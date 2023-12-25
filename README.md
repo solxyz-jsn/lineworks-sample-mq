@@ -36,7 +36,7 @@ LINE WORKS Botへ送信されるメッセージは「[LINE WORKS API応用](http
 - [Gradle](https://gradle.org/releases/)がインストール済み
 - [Java SE 17（LTS）](https://www.oracle.com/jp/java/technologies/downloads/)がインストール済み
 - [GitHub](https://github.co.jp/)のアカウントを作成済み
-- [Git](https://gitforwindows.org/)がインストール済み
+- [Git](https://git-scm.com/downloads)がインストール済み
 - [Amazon Web Services](https://aws.amazon.com/jp/register-flow/)のアカウントを作成済み
 
 各種のインストール方法およびアカウント作成方法はリンク先を参照してください。
@@ -84,7 +84,7 @@ Visual Studio Codeでフォルダ`publisher`を開いてください。
 
 ##### パブリッシャーの起動後設定
 
-起動後に行う設定の詳細は、コース「LINE WORKSのBotにMQを実装」でも説明を記載しています。併せて参考にしてください。
+起動後に行う設定の詳細は、[SOLXYZ Academy](https://academy.solxyz.co.jp)内コース「LINE WORKSのBotにMQを実装」でも説明を記載しています。併せて参考にしてください。
 
 ###### ポート転送設定
 
