@@ -37,7 +37,7 @@ LINE WORKS Botへ送信されるメッセージは「[LINE WORKS API応用](http
 - [Java SE 17（LTS）](https://www.oracle.com/jp/java/technologies/downloads/)がインストール済み
 - [GitHub](https://github.co.jp/)のアカウントを作成済み
 - [Git](https://gitforwindows.org/)がインストール済み
-- [Amazon Web Services](https://aws.amazon.com/jp/register-flow/)のアカウントを所持
+- [Amazon Web Services](https://aws.amazon.com/jp/register-flow/)のアカウントを作成済み
 
 各種のインストール方法およびアカウント作成方法はリンク先を参照してください。
 
