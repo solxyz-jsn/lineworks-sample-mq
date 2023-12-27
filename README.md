@@ -43,7 +43,7 @@ Botへ送信されるメッセージは「LINE WORKS API応用」のサンプル
 
 ### 事前準備
 
-- [Amazon MQ](https://ap-northeast-1.console.aws.amazon.com/amazon-mq/home?region=ap-northeast-1#/)からブローカーを新規作成
+- [Amazon MQ](https://ap-northeast-1.console.aws.amazon.com/amazon-mq/home?region=ap-northeast-1#/)から**ブローカーを`パブリックアクセス`で新規作成**
 
 - [LINE WORKSのアカウントを新規開設](https://join.worksmobile.com/jp/joinup/step1)
 
